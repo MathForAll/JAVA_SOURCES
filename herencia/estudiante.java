@@ -1,4 +1,5 @@
-import javax.swing.JOptionPane;
+import javax.swing.*;
+
 
 public class estudiante extends persona
 {
@@ -77,11 +78,17 @@ public class estudiante extends persona
 
 	public void informacion()
 	{
-		JOptionPane.showMessageDialog(null, "NOMBRE: " + nombre + "\tEDAD: " + edad + "\n"
+		String texto =  "NOMBRE: " + nombre + "\tEDAD: " + edad + "\n"
 						 + "ALTURA: " + altura + "\tPERSONALIDAD: " + personalidad + "\n"
 						 + "PESO: " + peso + "\n"
 						 + "UNIVERSIDAD: " + universidad + "\tCARRERA: " + carrera + "\n"
 						 + "CARNET: " + carnet + "\tPROMEDIO: " + prom);
+
+		JtextArea imp = new JtextArea(); 
+		JTextArea imp = new JTextArea(); 
+		imp.setText(texto); 
+		imp.setEditable(false);
+		JOptionPane.showMessageDialog(null, imp);
 	}
 
 	
